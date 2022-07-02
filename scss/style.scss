@@ -46,6 +46,7 @@ nav {
     }
     &:hover {
       background: grey;
+      color: #ffffff;
     }
   }
 }
@@ -55,7 +56,7 @@ main {
   align-items: center;
   justify-content: center;
   position: relative;
-	overflow: hidden;
+  overflow: hidden;
   height: 800px;
   background: radial-gradient(45% 50%, #505272, #020923);
   &:before {
@@ -94,7 +95,9 @@ main {
   z-index: 1;
   li {
     position: relative;
-    text-decoration: none;
+    list-style-type: none;
+    transition: 1s all;
+    cursor: pointer;
     .hexagon {
       position: relative;
       font-size: inherit;
@@ -148,7 +151,7 @@ main {
   }
   &_item_2 {
     order: 2;
-    transform: translateY($events-height / 4 );
+    transform: translateY($events-height / 4);
   }
   &_item_3 {
     font-size: 14px;

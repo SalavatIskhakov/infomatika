@@ -45,6 +45,7 @@ nav {
 }
 .menu_link:hover {
   background: grey;
+  color: #ffffff;
 }
 
 main {
@@ -91,7 +92,9 @@ main:after {
 }
 .events li {
   position: relative;
-  text-decoration: none;
+  list-style-type: none;
+  transition: 1s all;
+  cursor: pointer;
 }
 .events li .hexagon {
   position: relative;
