@@ -52,6 +52,7 @@ main {
   align-items: center;
   justify-content: center;
   position: relative;
+  overflow: hidden;
   height: 800px;
   background: radial-gradient(45% 50%, #505272, #020923);
 }
@@ -62,8 +63,8 @@ main:before {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 500px;
-  height: 500px;
+  width: 565px;
+  height: 565px;
   border: 1px solid white;
   border-radius: 100%;
 }
@@ -74,8 +75,81 @@ main:after {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 900px;
-  height: 900px;
+  width: 890px;
+  height: 890px;
   border: 1px solid white;
   border-radius: 100%;
+}
+
+.events {
+  display: flex;
+  justify-content: space-between;
+  height: 550px;
+  padding: 0;
+  margin: 0;
+  z-index: 1;
+}
+.events li {
+  position: relative;
+  text-decoration: none;
+}
+.events li .hexagon {
+  position: relative;
+  font-size: inherit;
+  height: 17.32em;
+  width: 10em;
+  border-radius: 1em/0.5em;
+  background: white;
+  transition: opacity 0.5s;
+  margin: 0 5em;
+}
+.events li .hexagon:before, .events li .hexagon:after {
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+  background: inherit;
+  content: "";
+}
+.events li .hexagon:before {
+  transform: rotate(60deg);
+}
+.events li .hexagon:after {
+  transform: rotate(-60deg);
+}
+.events li .hexagon_text {
+  position: absolute;
+  text-decoration: none;
+  display: inline-block;
+  color: black;
+  font-size: 20px;
+  z-index: 1;
+}
+.events_item_1, .events_item_5 {
+  font-size: 6px;
+}
+.events_item_2, .events_item_4 {
+  font-size: 9px;
+  align-self: center;
+}
+.events_item_1 {
+  order: 1;
+  align-self: end;
+}
+.events_item_2 {
+  order: 2;
+  transform: translateY(137.5px);
+}
+.events_item_3 {
+  font-size: 14px;
+  order: 3;
+  align-self: center;
+}
+.events_item_4 {
+  order: 4;
+  transform: translateY(-137.5px);
+}
+.events_item_5 {
+  order: 5;
+  align-self: start;
 }/*# sourceMappingURL=style.css.map */
