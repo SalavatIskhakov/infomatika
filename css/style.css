@@ -6,7 +6,7 @@
 
 nav {
   position: fixed;
-  z-index: 1;
+  z-index: 5;
   width: 100%;
   height: 50px;
 }
@@ -96,7 +96,8 @@ main .team_left {
   background: white;
   border-bottom-right-radius: 4.5%;
 }
-main .team_left h3 {
+main .team_left span {
+  font-size: 28px;
   font-weight: bold;
 }
 main .team_left:after {
@@ -120,7 +121,8 @@ main .team_right {
   border-top-left-radius: 4.5%;
   z-index: 1;
 }
-main .team_right h3 {
+main .team_right span {
+  font-size: 28px;
   font-weight: bold;
 }
 main .team_right:after {
@@ -172,11 +174,18 @@ main .team_right:after {
 }
 .events li .hexagon_text {
   position: absolute;
-  text-decoration: none;
-  display: inline-block;
-  color: black;
-  font-size: 20px;
+  width: 100%;
+  height: 100%;
+  padding: 30px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
   z-index: 1;
+}
+.events li .hexagon_text_place, .events li .hexagon_text_time, .events li .hexagon_text_link {
+  display: none;
 }
 .events_item_0, .events_item_6 {
   font-size: 0px;
@@ -185,9 +194,23 @@ main .team_right:after {
 .events_item_1, .events_item_5 {
   font-size: 6px;
 }
+.events_item_1 .hexagon_text, .events_item_5 .hexagon_text {
+  font-size: 17px;
+}
+.events_item_1 .hexagon_text_day, .events_item_5 .hexagon_text_day {
+  padding: 0 10px;
+  line-height: 20px;
+}
 .events_item_2, .events_item_4 {
   font-size: 9px;
   align-self: center;
+}
+.events_item_2 .hexagon_text, .events_item_4 .hexagon_text {
+  font-size: 20px;
+}
+.events_item_2 .hexagon_text_day, .events_item_4 .hexagon_text_day {
+  padding: 0 10px;
+  line-height: 20px;
 }
 .events_item_0 {
   order: 0;
@@ -205,6 +228,31 @@ main .team_right:after {
   font-size: 14px;
   order: 3;
   align-self: center;
+}
+.events_item_3 div.hexagon_text {
+  justify-content: space-around;
+}
+.events_item_3 div.hexagon_text_place, .events_item_3 div.hexagon_text_time,
+.events_item_3 div.hexagon_text a {
+  display: initial;
+  font-size: 20px;
+}
+.events_item_3 div.hexagon_text_day {
+  font-weight: bold;
+  font-size: 28px;
+}
+.events_item_3 div.hexagon_text a {
+  padding: 10px;
+  font-size: 18px;
+  line-height: 18px;
+  color: black;
+  text-decoration: none;
+  border: 1px solid black;
+  border-radius: 5px;
+  transition: 0.3s all;
+}
+.events_item_3 div.hexagon_text a:hover {
+  background-color: grey;
 }
 .events_item_4 {
   order: 4;
