@@ -96,7 +96,7 @@ main {
   li {
     position: relative;
     list-style-type: none;
-    transition: 1s all;
+    transition: 0.5s all;
     cursor: pointer;
     .hexagon {
       position: relative;
@@ -105,7 +105,7 @@ main {
       width: $hex-side;
       border-radius: 1em/0.5em;
       background: white;
-      transition: opacity 0.5s;
+      transition: opacity 0.1s;
       margin: 0 calc($hex-side / 2);
       &:before,
       &:after {
@@ -136,6 +136,12 @@ main {
       }
     }
   }
+
+  &_item_0,
+  &_item_6 {
+    font-size: 0px;
+    visibility: hidden;
+  }
   &_item_1,
   &_item_5 {
     font-size: 6px;
@@ -144,6 +150,10 @@ main {
   &_item_4 {
     font-size: 9px;
     align-self: center;
+  }
+  &_item_0 {
+    order: 0;
+    align-self: end;
   }
   &_item_1 {
     order: 1;
@@ -164,6 +174,10 @@ main {
   }
   &_item_5 {
     order: 5;
+    align-self: start;
+  }
+  &_item_6 {
+    order: 6;
     align-self: start;
   }
 }

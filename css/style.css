@@ -93,7 +93,7 @@ main:after {
 .events li {
   position: relative;
   list-style-type: none;
-  transition: 1s all;
+  transition: 0.5s all;
   cursor: pointer;
 }
 .events li .hexagon {
@@ -103,7 +103,7 @@ main:after {
   width: 10em;
   border-radius: 1em/0.5em;
   background: white;
-  transition: opacity 0.5s;
+  transition: opacity 0.1s;
   margin: 0 5em;
 }
 .events li .hexagon:before, .events li .hexagon:after {
@@ -128,12 +128,20 @@ main:after {
   font-size: 20px;
   z-index: 1;
 }
+.events_item_0, .events_item_6 {
+  font-size: 0px;
+  visibility: hidden;
+}
 .events_item_1, .events_item_5 {
   font-size: 6px;
 }
 .events_item_2, .events_item_4 {
   font-size: 9px;
   align-self: center;
+}
+.events_item_0 {
+  order: 0;
+  align-self: end;
 }
 .events_item_1 {
   order: 1;
@@ -154,5 +162,9 @@ main:after {
 }
 .events_item_5 {
   order: 5;
+  align-self: start;
+}
+.events_item_6 {
+  order: 6;
   align-self: start;
 }/*# sourceMappingURL=style.css.map */
