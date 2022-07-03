@@ -36,7 +36,7 @@ function initial() {
 }
 
 function scrollLeft() {
-  if (eventIndex > 3) {
+  if (eventIndex < 1) {
     return;
   }
 
@@ -46,11 +46,11 @@ function scrollLeft() {
   }
   hexagons[hexagons.length - 1].className = buf;
 
-  eventIndex++;
+  eventIndex--;
 }
 
 function scrollRight() {
-  if (eventIndex < 1) {
+  if (eventIndex > 3) {
     return;
   }
 
@@ -60,8 +60,23 @@ function scrollRight() {
   }
   hexagons[0].className = buf;
 
-  eventIndex--;
+  eventIndex++;
 }
+
+hexagons.forEach((hexagon, i) => {
+  hexagon.addEventListener('click', () => {
+    console.log(i, eventIndex)
+    while (i - eventIndex != 1) {
+      if (i - eventIndex > 1) {
+        scrollRight();
+      } else {
+        scrollLeft();
+      }
+    console.log(eventIndex)
+
+    }
+  })
+});
 
 let flag = true;
 document.addEventListener('wheel', (e) => {
