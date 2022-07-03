@@ -59,6 +59,7 @@ main {
   overflow: hidden;
   height: 800px;
   background: radial-gradient(45% 50%, #505272, #020923);
+  font-size: 14px;
   &:before {
     content: "";
     position: absolute;
@@ -82,6 +83,62 @@ main {
     height: 890px;
     border: 1px solid white;
     border-radius: 100%;
+  }
+  .team_left {
+    // text
+    display: flex;
+    align-items: center;
+    padding-right: 20px;
+    justify-content: end;
+    h3 {
+      font-weight: bold;
+    }
+    // block
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-100%);
+    width: calc(49% - $hex-side);
+    height: calc($hex-side * 1.732 / 2);
+    background: white;
+    border-bottom-right-radius: 4.5%;
+    // z-index: 1;
+    &:after {
+      position: absolute;
+      left: calc(99% + 3px);
+      border-top: calc($hex-side * 1.732 / 2) solid white;
+      border-right: calc($hex-side / 2) solid transparent;
+      border-radius: 0 20% 0 10%;
+      content: "";
+    }
+  }
+
+  .team_right {
+    // text
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    h3 {
+      font-weight: bold;
+    }
+    // block
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: calc(49% - $hex-side);
+    height: calc($hex-side * 1.732 / 2);
+    background: white;
+    border-top-left-radius: 4.5%;
+    z-index: 1;
+
+    &:after {
+      position: absolute;
+      right: calc(99% + 3px);
+      border-bottom: calc($hex-side * 1.732 / 2) solid white;
+      border-left: calc($hex-side / 2) solid transparent;
+      border-radius: 0 10% 0 20%;
+      content: "";
+    }
   }
 }
 

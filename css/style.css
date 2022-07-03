@@ -56,6 +56,7 @@ main {
   overflow: hidden;
   height: 800px;
   background: radial-gradient(45% 50%, #505272, #020923);
+  font-size: 14px;
 }
 main:before {
   content: "";
@@ -80,6 +81,55 @@ main:after {
   height: 890px;
   border: 1px solid white;
   border-radius: 100%;
+}
+main .team_left {
+  display: flex;
+  align-items: center;
+  padding-right: 20px;
+  justify-content: end;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-100%);
+  width: calc(49% - 10em);
+  height: 8.66em;
+  background: white;
+  border-bottom-right-radius: 4.5%;
+}
+main .team_left h3 {
+  font-weight: bold;
+}
+main .team_left:after {
+  position: absolute;
+  left: calc(99% + 3px);
+  border-top: 8.66em solid white;
+  border-right: 5em solid transparent;
+  border-radius: 0 20% 0 10%;
+  content: "";
+}
+main .team_right {
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: calc(49% - 10em);
+  height: 8.66em;
+  background: white;
+  border-top-left-radius: 4.5%;
+  z-index: 1;
+}
+main .team_right h3 {
+  font-weight: bold;
+}
+main .team_right:after {
+  position: absolute;
+  right: calc(99% + 3px);
+  border-bottom: 8.66em solid white;
+  border-left: 5em solid transparent;
+  border-radius: 0 10% 0 20%;
+  content: "";
 }
 
 .events {
