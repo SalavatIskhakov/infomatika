@@ -1,0 +1,266 @@
+@media (max-width: 991px) {
+  .menu {
+    padding: 10px 0;
+    &_link {
+      font-size: 10px;
+    }
+  }
+
+  main {
+    font-size: 12px;
+    &:before {
+      width: 487px;
+      height: 487px;
+    }
+    &:after {
+      width: 770px;
+      height: 770px;
+    }
+    .team_left {
+      &:after {
+        left: calc(99% + 1px);
+      }
+    }
+    .team_right {
+      &:after {
+        right: calc(99% + 1px);
+      }
+    }
+  }
+
+  .events {
+    &_item_1,
+    &_item_5 {
+      font-size: 4px;
+      .hexagon_text {
+        &_day {
+          line-height: 15px;
+        }
+        font-size: 12px;
+      }
+    }
+    &_item_2,
+    &_item_4 {
+      .hexagon_text {
+        &_day {
+          line-height: 15px;
+        }
+        font-size: 17px;
+      }
+      font-size: 7px;
+    }
+    &_item_3 {
+      div.hexagon_text {
+        justify-content: space-around;
+        &_place,
+        &_time,
+        a {
+          font-size: 15px;
+        }
+        &_day {
+          font-size: 28px;
+        }
+        a {
+          font-size: 15px;
+          line-height: 15px;
+        }
+      }
+      font-size: 12px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .menu {
+    position: fixed;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100vh;
+    padding: 20px 15px;
+    background: rgba(0, 0, 0, 0.8);
+    transition: 0.5s all;
+    &_active {
+      left: 0;
+    }
+    &_item {
+      width: 100%;
+      text-align: center;
+      padding-right: 0;
+      border: none;
+      margin: 10px 0;
+    }
+    &_link {
+      font-size: 20px;
+    }
+  }
+
+  .hamburger {
+    display: block;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 48px;
+    transition: 0.5s all;
+    background: url("../icons/menu.png") center center/cover no-repeat;
+    &_active {
+      background: url("../icons/cansel.png") center center/cover no-repeat;
+    }
+  }
+
+  main {
+    font-size: 12px;
+    &:before {
+      width: 500px;
+      height: 500px;
+    }
+    &:after {
+      width: 785px;
+      height: 785px;
+    }
+    .team_left {
+      padding: 0;
+      span {
+        font-size: 23px;
+      }
+      &:after {
+        left: calc(99% + 1px);
+      }
+    }
+    .team_right {
+      padding: 0;
+      span {
+        font-size: 23px;
+      }
+      &:after {
+        right: calc(99% + 1px);
+      }
+    }
+  }
+
+  .events {
+    &_item_1,
+    &_item_5 {
+      font-size: 3px;
+      .hexagon_text {
+        &_day {
+          line-height: 9px;
+        }
+        font-size: 9px;
+      }
+    }
+    &_item_2,
+    &_item_4 {
+      font-size: 6px;
+      .hexagon_text {
+        &_day {
+          line-height: 15px;
+        }
+        font-size: 17px;
+      }
+    }
+    &_item_3 {
+      font-size: 10px;
+      div.hexagon_text {
+        &_place,
+        &_time,
+        a {
+          font-size: 15px;
+        }
+        &_day {
+          font-size: 23px;
+        }
+        a {
+          font-size: 12px;
+          line-height: 12px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  $events-height-phone: 350px;
+
+  main {
+    font-size: 7.5px;
+    &:before {
+      width: 250px;
+      height: 250px;
+    }
+    &:after {
+      width: 400px;
+      height: 400px;
+    }
+    .team_left {
+      text-align: center;
+      padding: 0;
+      span {
+        font-size: 15px;
+      }
+      &:after {
+        left: calc(99% - 1px);
+      }
+    }
+    .team_right {
+      text-align: center;
+      padding: 0;
+      span {
+        font-size: 15px;
+        z-index: 1;
+      }
+      &:after {
+        right: calc(99% - 1px);
+      }
+    }
+  }
+
+  .events {
+    height: $events-height-phone;
+
+    li .hexagon {
+      margin: 0 calc($hex-side / 6);
+    }
+
+    &_item_2,
+    &_item_4 {
+      font-size: 4.5px;
+      .hexagon_text {
+        &_day {
+          line-height: 13px;
+        }
+        font-size: 13px;
+      }
+    }
+    &_item_3 {
+      font-size: 7.5px;
+      div.hexagon_text {
+        &_place,
+        &_time,
+        a {
+          font-size: 12px;
+        }
+        &_day {
+          font-size: 18px;
+        }
+        a {
+          padding: 5px;
+          font-size: 10px;
+          line-height: 10px;
+        }
+      }
+    }
+    &_item_2 {
+      transform: translateY($events-height-phone / 4);
+    }
+    &_item_4 {
+      order: 4;
+      transform: translateY(-$events-height-phone / 4);
+    }
+  }
+}

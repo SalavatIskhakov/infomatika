@@ -53,11 +53,27 @@ const events = [
 
 const hexagons = document.querySelectorAll('.events li');
 const teams = document.querySelectorAll('main div span');
+const menu = document.querySelector('.menu');
+const menuItem = document.querySelectorAll('.menu_item');
+const hamburger = document.querySelector('.hamburger');
 
 hexagons[0].style.visibility = 'hidden';
 hexagons[6].style.visibility = 'hidden';
 
+hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('hamburger_active');
+    menu.classList.toggle('menu_active');
+});
+
+menuItem.forEach(item => {
+    item.addEventListener('click', () => {
+        hamburger.classList.toggle('hamburger_active');
+        menu.classList.toggle('menu_active');
+    })
+})
+
 let eventIndex = 2;
+
 
 initial();
 
@@ -68,7 +84,6 @@ function initial() {
     hexagon[1].innerHTML = events[i].day
     hexagon[2].innerHTML = events[i].time;
     hexagon[3].href = events[i].link;
-    // hexagon.innerHTML = events[i].place;
   }
   teams[0].innerHTML = events[eventIndex].teams[0];
   teams[1].innerHTML = events[eventIndex].teams[1];
